@@ -2,14 +2,49 @@
 
 A Claude Code plugin for scaffolding, developing, testing, and governing NestJS MCP servers from the ITZ hardened template.
 
+## Highlights
+
+- **Full server lifecycle** — scaffold, add tools, migrate, and govern from a single plugin without leaving Claude Code
+- **Security-first tooling** — every tool and resource is audited against 7 security layers and ITZ CIO naming rules
+- **9-gate governance automation** — walks every CIO gate from APM registration to ArchUnitTS architecture fitness tests
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Skills](#skills)
+- [Agent](#agent)
+- [Template](#template)
+- [Contributing](#contributing)
+- [License](#license)
+
 ## Installation
 
-```bash
-# Install from this directory
-claude plugin install ./mcpcraft
+Requires [Claude Code](https://claude.ai/code) with plugin support enabled.
 
-# Or test locally without installing
+```bash
+claude plugin install ./mcpcraft
+```
+
+To test without installing:
+
+```bash
 claude --plugin-dir ./mcpcraft
+```
+
+## Quick Start
+
+Open Claude Code inside an existing MCP server project, or a new directory to scaffold from scratch:
+
+```text
+# Scaffold a new NestJS MCP server
+/mcpcraft:mcp-server-setup
+
+# Add a tool to an existing server
+/mcpcraft:mcp-builder
+
+# Run a full end-to-end audit spanning all skills
+@mcp-dev audit my entire MCP server
 ```
 
 ## Skills
@@ -30,7 +65,7 @@ Invoke skills with the `/mcpcraft:<skill-name>` prefix:
 
 The `mcp-dev` agent orchestrates multi-skill workflows. Use it for tasks that span several skills:
 
-```
+```text
 @mcp-dev audit my entire MCP server
 @mcp-dev set up and govern a new server
 @mcp-dev migrate this server to the latest template
@@ -57,3 +92,17 @@ This plugin is built around the [ITZ NestJS MCP Server Template](../itz-repos/As
 - OpenTelemetry tracing
 - ArchUnitTS architecture fitness tests
 - MCP 2025-03-26 protocol compliance (streamable HTTP transport)
+
+## Contributing
+
+Contributions are welcome. For significant additions (new skills, agent changes), open an issue first to discuss the approach before raising a pull request.
+
+To develop and test skills locally without installing the plugin:
+
+```bash
+claude --plugin-dir ./mcpcraft
+```
+
+## License
+
+<!-- TODO: Add a LICENSE file and update this section. -->
