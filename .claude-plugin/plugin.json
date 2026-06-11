@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "mcpcraft",
+  "displayName": "MCPCraft",
+  "description": "Scaffold, develop, test, and govern NestJS MCP servers from the ITZ hardened template.",
+  "author": {
+    "name": "ITZ"
+  },
+  "keywords": ["mcp", "nestjs", "governance", "security"],
+  "defaultEnabled": false
+}
